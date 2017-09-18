@@ -120,6 +120,9 @@ NeoBundle 'Yggdroot/indentLine' " インデントの可視化
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete'
+" Python補完
+NeoBundle 'davidhalter/jedi-vim'
+
 
 " -----------------------------------------------------
 call neobundle#end()
@@ -128,7 +131,9 @@ filetype plugin indent on     " required!
 filetype indent on
 syntax on
 NeoBundleCheck "未インストールのプラグインがある場合は尋ねるようにする
-
+set t_Co=256
+let g:lightline = {}
+"let g:lightline.colorscheme = 'railscasts'
 set laststatus=2 " ステータスラインを常に表示
 set showmode " 現在のモードを表示
 set showcmd " 打ったコマンドをステータスラインの下に表示
